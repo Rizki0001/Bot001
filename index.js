@@ -422,8 +422,8 @@ client.on('group-participants-update', async (anu) => {
                     buf = await getBuffer(anu.result)
                     client.sendMessage(from, buf, image, { quoted: mek, caption: 'ih wibu'})
 					
-                    break
-                    case 'play'://silahkan kalian custom sendiri jika ada yang ingin diubah
+			break
+                 case 'play'://silahkan kalian custom sendiri jika ada yang ingin diubah
             if (args.length == 0) return aruga.reply(from, `Untuk mencari lagu dari youtube\n\nPenggunaan: ${prefix}play judul lagu`, id)
             axios.get(`https://arugaytdl.herokuapp.com/search?q=${body.slice(6)}`)
             .then(async (res) => {
@@ -435,11 +435,11 @@ client.on('group-participants-update', async (anu) => {
 					await aruga.sendFileFromUrl(from, `${res.link}`, '', '', id)
 					.catch(() => {
 						aruga.reply(from, `URL Ini ${args[0]} Sudah pernah di Download sebelumnya. URL akan di Reset setelah 1 Jam/60 Menit`, id)
-					})
-				})
-            })
-            .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
+					})		
+                    
+				
+
+
                 break
                 case 'dewabatch':
                    if (!isGroup) return reply(mess.only.group)
