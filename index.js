@@ -421,6 +421,7 @@ client.on('group-participants-update', async (anu) => {
                     anu = await fetchJson(`https://arugaz.herokuapp.com/api/nekonime` , {method: 'get'})
                     buf = await getBuffer(anu.result)
                     client.sendMessage(from, buf, image, { quoted: mek, caption: 'ih wibu'})
+					
                     break
                     case 'play'://silahkan kalian custom sendiri jika ada yang ingin diubah
             if (args.length == 0) return aruga.reply(from, `Untuk mencari lagu dari youtube\n\nPenggunaan: ${prefix}play judul lagu`, id)
