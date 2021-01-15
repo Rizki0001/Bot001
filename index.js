@@ -378,6 +378,7 @@ client.on('group-participants-update', async (anu) => {
             await aruga.sendImage(from, `${nulisp}`, '', 'Nih...', id)
             .catch(() => {
                 aruga.reply(from, 'Ada yang Error!', id)
+		    break
                  case 'phlogo':
 					var gh = body.slice(9)
 					var gbl1 = gh.split("|")[0];
